@@ -9,11 +9,9 @@ type studentProps = {
 }
 const ITable: React.FC<studentProps> = ({data}) => (
   <Table dataSource={data}>
-      <Column title="Id" dataIndex="id" key="id" />
-      <Column title="Name" dataIndex="name" key="name" />
-
+    <Column title="Id" dataIndex="id" key="id" />
+    <Column title="Name" dataIndex="name" key="name" />
     <Column title="Profession" dataIndex="profession" key="profession" />
-
     <Column
       title="Action"
       key="action"

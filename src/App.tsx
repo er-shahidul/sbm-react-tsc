@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import IButton from './components/IButton';
-import ITable from './components/ITable';
+import IButton from './components/CButton';
+import ITable from './components/CTable';
 import axios from 'axios';
 import { IStudent } from './interfaces/Student.interface';
 function App() {
