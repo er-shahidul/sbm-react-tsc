@@ -1,25 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import IButton from './components/IButton';
+import ITable from './components/ITable';
+import axios from 'axios';
+import { IStudent } from './interfaces/Student.interface';
 function App() {
+  const [data, setData] = useState<IStudent[]>([]);
+
+  useEffect(()=>{
+    const fetchData = ()=>{
+      axios.get('http://localhost:8182/student').then((res)=>{
+        console.log('res', res);
+        setData(res.data);
+      })
+    }
+    fetchData();
+    }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ITable data = {data}/>
+    </>
+   
   );
 }
 
