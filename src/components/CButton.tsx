@@ -1,10 +1,13 @@
 import React from 'react';
 import { Button, Space } from 'antd';
+import CForm from './CForm';
+import { Link } from "react-router-dom";
 
-const IButton: React.FC = () => (
+
+const CButton: React.FC = () => (
   <Space wrap>
-    <Button type="primary">Primary Button</Button>
+    <Link to='/cform'>Form</Link>
   </Space>
 );
 
-export default IButton;
+export default CButton;

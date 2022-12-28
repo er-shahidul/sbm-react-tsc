@@ -7,7 +7,7 @@ const { Column } = Table;
 type studentProps = {
     data: IStudent[]
 }
-const ITable: React.FC<studentProps> = ({data}) => (
+const CTable: React.FC<studentProps> = ({data}) => (
   <Table dataSource={data}>
     <Column title="Id" dataIndex="id" key="id" />
     <Column title="Name" dataIndex="name" key="name" />
@@ -25,4 +25,4 @@ const ITable: React.FC<studentProps> = ({data}) => (
   </Table>
 );
 
-export default ITable;
+export default CTable;
